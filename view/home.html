@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Nuestro Portafolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Barra de menu -->
+        <a class="navbar-brand ps-3" href="#">Welcome!</a>
+
+        <!-- Visualización de perfil -->
+        <ul class="navbar-nav ms-auto ms-auto me-0 me-md-3 my-2 my-md-0">
+            <li class="nav-item dropdown">
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#!">Perfil</a></li><!-- Opción para visualizar tu perfil -->
+                    <li>
+                        <hr class="dropdown-divider" /><!-- Linea de separación -->
+                    </li>
+                    <li><a class="dropdown-item" href="#!">Cerrar sesión</a></li><!-- Opción de cerrar sesión -->
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <!-- Menu y opciones del menu -->
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <!-- Opción de Home -->
+                        <a class="nav-link" href="home.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                            Home
+                        </a>
+                        <!-- Opción registrar usuario -->
+                        <a class="nav-link" href="register.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                            Registrar usuario
+                        </a>
+                        <!-- Opción de contactanos -->
+                        <a class="nav-link" href="contactanos.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-message"></i></div>
+                            Contactanos
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Contenido del home-->
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Home</h1>
+                    <ol class="breadcrumb mb-4">
+                        <li class="breadcrumb-item active">SERVICIOS</li>
+                    </ol>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <!--Carrusel de fotos-->
+                            <div class="container">
+                                <br>
+                                <div id="theCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicadores -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#theCarousel" data-slide-to="1"></li>
+                                        <li data-target="#theCarousel" data-slide-to="2"></li>
+                                        <li data-target="#theCarousel" data-slide-to="3"></li>
+
+                                    </ol>
+
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="img/desarrolloSoftware.jpg" alt="Ilustracion">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h3>Desarrollo de Software</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/website.jpg" alt="Ilustracion">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h3> Paginas Web</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/appMovil.jpg" alt="Ilustracion">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h3>Apps Moviles</h3>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img src="img/gestionEmpresarial.jpg" alt="Ilustracion">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h3>Software gestión empresarial</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <!--Imagen equipo de trabajo-->
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    Equipo de Trabajo
+                                </div>
+                                <div class="card-body">
+                                    <div class="container-a4">
+                                        <ul class="caption-style-4">
+                                            <li>
+                                                <img width="99%" src="img/team.jpg" alt="">
+                                                <div class="caption">
+                                                    <div class="blur"></div>
+                                                    <div class="caption-text">
+                                                        <h1>Nuestros Colaboradores</h1>
+                                                        <p>Diana Serrano - Lider</p>
+                                                        <p>Mariana Diaz - Fronend</p>
+                                                        <p>Andres Estepa - Backend</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Imagen nuestros clientes-->
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    Nuestros clientes
+                                </div>
+                                <div class="card-body">
+                                    <div class="container-a4">
+                                        <ul class="caption-style-4">
+                                            <li>
+                                                <img width="115%" src="img/clientes.jpg" alt="">
+                                                <div class="caption">
+                                                    <div class="blur"></div>
+                                                    <div class="caption-text">
+                                                        <h1>Nuestros Clientes</h1>
+                                                        <p>ComprassSaltie</p>
+                                                        <p>MorrosEco</p>
+                                                        <p>Serviguros</p>
+                                                        <p>Devisofter</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+            <!--footer-->
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright © 2024. Software . Todos los derechos reservados.</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
