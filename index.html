@@ -9,7 +9,8 @@
     <meta name="author" content="" />
     <title>Login - SB Admin</title>
     <link href="view/css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
 
 <body class="bg-primary">
@@ -28,16 +29,25 @@
                                     </h3 </div>
                                     <div class="card-body">
                                         <!--Formulario de ingreso-->
-                                        <form>
+                                        <form id="login_form" method="post" action="/form" autocomplete="off">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email"
-                                                    placeholder="name@example.com" />
-                                                <label for="inputEmail">Email address</label>
+                                                <div class="form-control-wrapper form-control-icon-right">
+                                                    <input type="email" class="form-control" id="email" name="email"
+                                                        placeholder="Ingrese Email">
+                                                    <small class="text-muted text-danger alerta" id="email_alert"
+                                                        hidden>El email debe contener letras min y may, un @ y un (.com,
+                                                        .co, etc).</small>
+                                                </div>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" type="password"
-                                                    placeholder="Password" />
-                                                <label for="inputPassword">Password</label>
+
+                                                <div class="form-control-wrapper form-control-icon-right">
+                                                    <input type="password" class="form-control" id="pass" name="pass"
+                                                        placeholder="Ingrese contraseña">
+                                                    <small class="text-muted text-danger alerta" id="pass_alert"
+                                                        hidden>La contraseña debe contener minimo una letra may y una
+                                                        min, numero, max 8 caracteres.</small>
+                                                </div>
                                             </div>
                                             <br>
                                             <!--Boton de ingreso-->
@@ -68,9 +78,8 @@
             </footer>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+
+    <script src="login.js"></script>
 </body>
 
 </html>
