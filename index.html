@@ -29,11 +29,11 @@
                                     </h3 </div>
                                     <div class="card-body">
                                         <!--Formulario de ingreso-->
-                                        <form id="login_form" method="post" action="/form" autocomplete="off">
+                                        <form id="login_form">
                                             <div class="form-floating mb-3">
                                                 <div class="form-control-wrapper form-control-icon-right">
                                                     <input type="email" class="form-control" id="email" name="email"
-                                                        placeholder="Ingrese Email">
+                                                        placeholder="Ingrese Email" autofocus>
                                                     <small class="text-muted text-danger alerta" id="email_alert"
                                                         hidden>El email debe contener letras min y may, un @ y un (.com,
                                                         .co, etc).</small>
@@ -52,8 +52,9 @@
                                             <br>
                                             <!--Boton de ingreso-->
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="#">Forgot Password?</a>
-                                                <a class="btn" href="view/home.html">Ingresar</a>
+                                                <a class="small ptext" href="view/register/register.html"> No tienes una
+                                                    cuenta? Registro</a>
+                                                <input type="submit" class="btn" value="Ingresar">
                                             </div>
                                         </form>
                                     </div>

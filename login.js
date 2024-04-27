@@ -47,6 +47,7 @@ function validateData(expresion, input, campo) {
         $('#' + campo).addClass('form-control-danger');
         $('#' + campo + '_alert').prop('hidden', false);
     }
+
 }
 
 // Funcion con algunas alertas
@@ -72,7 +73,10 @@ function validarDatos(e) {
             confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
+    } else {
+        ingresar();
     }
+
 }
 
 
@@ -90,6 +94,32 @@ function cleanValidation() {
         small.hidden = true;
     });
 
+}
+
+
+//--------------------------------------------------------------------------------------------------------------
+// Funcion  para el inicio de sesion 
+function ingresar() {
+
+    const email = document.querySelector('#email').value
+    const pass = document.querySelector('#pass').value
+
+    // validamos que el email y la contraseña considan con algun usurio en nuestro arreglo de usuarios
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const validUser = Users.find(user => user.email === email && user.pass === pass);
+    // Si el find no nos trae nada valido, el usurio ingreso mal alguno de sus datos, en este caso enviamo una alerta de datos incorrectos
+    if (!validUser) {
+        return alert('Usuario y/o contraseña incorrectos')
+    }
+
+    // En caso de traer un resultado valido se envia una alerta de bienvenida
+    alert('Bienvenid@ ' + validUser.name);
+
+    //Validamos si hay un usuario con la sesion iniciada
+    localStorage.setItem('login_success', JSON.stringify(validUser))
+
+    // Una vez sale la alerta nos dirige al Home
+    window.location.href = 'view/home.html'
 }
 
 //invocamos init para que se ejecute una vez se abra la pestaña

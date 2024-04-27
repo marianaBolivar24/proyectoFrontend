@@ -1,6 +1,8 @@
 const inputs = document.querySelectorAll('#regis_form input');
 const smallForm = document.querySelectorAll('#regis_form small');
 
+
+
 const expresiones = {
     name: /^[a-zA-Z\s]{3,25}$/, // Letras y espacios
     lastName: /^[a-zA-Z\s]{3,25}$/,  // Letras y espacios
@@ -90,6 +92,8 @@ function validarDatos(e) {
             confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
+    } else {
+        registrar();
     }
 }
 
@@ -109,6 +113,35 @@ function cleanValidation() {
     });
 
 }
+
+//------------------------------------------------------------------------------------------------------------
+// Obtenemos el formulario de registro por su ID 
+function registrar() {
+
+    const name = document.querySelector('#name').value
+    const lastName = document.querySelector('#lastName').value
+    const cell = document.querySelector('#cell').value
+    const email = document.querySelector('#email').value
+    const inputRol = document.querySelector('#inputRol').value
+    const active = document.querySelector('#active').value
+    const pass = document.querySelector('#pass').value
+
+    // Validamos si ya tenemos este usuario o si lo creamos de cero
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const isUserRegistred = Users.find(user => user.email === email)
+    // Si encontramos que el usuario (email) ya existe en nuestra BD devolvemos una alerta
+    if (isUserRegistred) {
+        return alert('El usuario ya esta registrado');
+    }
+
+    //En el caso de que no este registrado, creamos el usuario
+    Users.push({ name: name, lastName: lastName, cell: cell, email: email, inputRol: inputRol, active: active, pass: pass });
+    localStorage.setItem('users', JSON.stringify(Users))
+    alert('Registro Exitoso!');
+    // Una vez sale la alerta nos dirige al login
+    window.location.href = '../../index.html'
+}
+
 
 //invocamos init para que se ejecute una vez se abra la pestaña
 init();

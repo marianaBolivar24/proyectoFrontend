@@ -84,6 +84,8 @@ function validarDatos(e) {
             confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
+    } else {
+        contactanos();
     }
 }
 
@@ -102,6 +104,25 @@ function cleanValidation() {
         small.hidden = true;
     });
 
+}
+
+
+// Obtenemos el formulario de login por su ID 
+function contactanos() {
+
+    const name = document.querySelector('#name').value
+    const lastName = document.querySelector('#lastName').value
+    const email = document.querySelector('#email').value
+    const message = document.querySelector('#message').value
+
+    const Messages = JSON.parse(localStorage.getItem('message')) || []
+
+    //Creamos un nuevo mensaje
+    Messages.push({ name: name, lastName: lastName, email: email, message: message });
+    localStorage.setItem('message', JSON.stringify(Messages))
+    alert('Se envio tu mensaje!');
+    // Una vez sale la alerta nos dirige al home
+    window.location.href = '../home.html'
 }
 
 //invocamos init para que se ejecute una vez se abra la pestaña

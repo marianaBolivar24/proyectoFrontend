@@ -79,18 +79,18 @@
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <select class="form-control" id="inputRol" type="text"
                                                         placeholder="Rol">
-                                                        <option value="admin">Administrador</option>
-                                                        <option value="user">Usuario</option>
+                                                        <option value="0">Administrador</option>
+                                                        <option value="1">Usuario</option>
                                                     </select>
                                                     <label for="inputPassword">Rol</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <select class="form-control" id="inputRol" type="text"
-                                                        placeholder="Rol">
-                                                        <option value="admin">Active</option>
-                                                        <option value="user">Inactive</option>
+                                                    <select class="form-control" id="active" type="text"
+                                                        placeholder="Activo o inactivo">
+                                                        <option value="0">Active</option>
+                                                        <option value="1">Inactive</option>
                                                     </select>
                                                     <label for="inputPassword">Estado del usuario</label>
                                                 </div>
@@ -109,8 +109,7 @@
                                         </div>
                                         <!--Boton de registrar-->
                                         <div class="mt-4 mb-0">
-                                            <div class="d-grid"><a class="btn" href="../../index.html">Create
-                                                    Account</a>
+                                            <div class="d-grid"><input type="submit" class="btn" value="Registro">
                                             </div>
                                         </div>
                                     </form>
